@@ -1,2 +1,10 @@
 rootProject.name='My Application'
 include ':app'
+
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'flutter_contact/flutter_library/.android/include_flutter.groovy'
+))
+
+include ':flutter_library'
