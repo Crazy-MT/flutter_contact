@@ -70,7 +70,7 @@ class FlutterPlugin(private val flutterFragment: FlutterFragment) :
 
             "finishProgress" -> {
                 val activity = flutterFragment.context as MainActivity
-                activity.finishFlutter();
+//                activity.finishFlutter();
                 result.success(true)
             }
 
