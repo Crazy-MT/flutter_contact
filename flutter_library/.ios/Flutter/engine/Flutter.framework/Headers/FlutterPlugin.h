@@ -398,7 +398,7 @@ typedef enum {
  *
  * @param pluginKey The unique key identifying the plugin.
  */
-- (NSObject<FlutterPluginRegistrar>*)registrarForPlugin:(NSString*)pluginKey;
+- (nullable NSObject<FlutterPluginRegistrar>*)registrarForPlugin:(NSString*)pluginKey;
 /**
  * Returns whether the specified plugin has been registered.
  *
@@ -415,7 +415,7 @@ typedef enum {
  *   nothing has been published. Will be `nil` if the plugin has not been
  *   registered.
  */
-- (NSObject*)valuePublishedByPlugin:(NSString*)pluginKey;
+- (nullable NSObject*)valuePublishedByPlugin:(NSString*)pluginKey;
 @end
 
 #pragma mark -

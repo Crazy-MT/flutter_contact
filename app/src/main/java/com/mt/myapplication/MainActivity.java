@@ -2,6 +2,8 @@ package com.mt.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import io.flutter.embedding.android.FlutterFragment;
+import io.flutter.embedding.android.FlutterView;
+
 import com.mt.myapplication.FlutterPlugin;
 import android.os.Bundle;
 
@@ -17,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
         flutterFragment = new FlutterFragment.NewEngineFragmentBuilder().initialRoute("route_contact").build();
         getSupportFragmentManager().beginTransaction().replace(R.id.content, flutterFragment).commit();
+
+        FlutterFragment flutterFragment2 = new FlutterFragment.NewEngineFragmentBuilder().initialRoute("route_flutter").build();
+        getSupportFragmentManager().beginTransaction().replace(R.id.flutter_2, flutterFragment2).commit();
     }
 
     @Override
